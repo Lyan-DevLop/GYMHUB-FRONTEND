@@ -1,0 +1,122 @@
+.auth-page {
+  --background: linear-gradient(135deg, #1a237e, #3949ab);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.auth-container {
+  width: 100%;
+  max-width: 420px;
+  margin: auto;
+}
+
+.auth-card {
+  border-radius: 22px;
+  background: #ffffff;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.auth-title {
+  text-align: center;
+  font-size: 1.7rem;
+  color: #1a237e;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+ion-card-header ion-text {
+  display: block;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #757575;
+}
+
+/* === INPUT GROUP AJUSTADO === */
+.input-group {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #c5cae9;
+  border-radius: 10px;
+  margin-top: 18px;
+  padding: 2px 10px;
+  transition: all 0.25s ease;
+}
+
+.input-group:focus-within {
+  border-color: #3f51b5;
+  box-shadow: 0 0 0 2px rgba(63, 81, 181, 0.2);
+}
+
+.input-group ion-icon {
+  color: #5c6bc0;
+  font-size: 1.3rem;
+  margin-right: 8px;
+}
+
+.input-group ion-input,
+.input-group ion-select {
+  flex: 1;
+  --padding-start: 0;
+  --padding-top: 12px;
+  --padding-bottom: 12px;
+  --highlight-color-focused: #3f51b5;
+  font-size: 0.95rem;
+  border: none;
+}
+
+/* Para evitar borde doble */
+.input-group ion-input::part(native),
+.input-group ion-select::part(native) {
+  border: none;
+}
+
+/* === BOTÓN DE ACCIÓN === */
+.auth-btn {
+  margin-top: 25px;
+  --background: #1a237e;
+  --background-activated: #0d175a;
+  --border-radius: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  height: 44px;
+}
+
+/* === TEXTO DE ABAJO === */
+.register-text {
+  display: block;
+  text-align: center;
+  margin-top: 18px;
+  font-size: 0.9rem;
+  color: #5c6bc0;
+}
+
+.register-text ion-button {
+  --color: #1a237e;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: none;
+  --background: transparent;
+  height: auto;
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+

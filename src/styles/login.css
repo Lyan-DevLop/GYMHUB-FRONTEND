@@ -1,0 +1,75 @@
+.auth-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #004e92, #000428);
+  height: 100%;
+}
+
+.auth-container {
+  width: 100%;
+  max-width: 400px;
+}
+
+.auth-card {
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.auth-title {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--ion-color-primary);
+  text-align: center;
+}
+
+.input-item {
+  --background: #ffffff;
+  --padding-start: 8px;
+  --inner-padding-end: 8px;
+  --highlight-color-focused: var(--ion-color-primary);
+  border-radius: 10px;
+  margin-top: 14px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.input-item ion-icon {
+  color: var(--ion-color-primary);
+  font-size: 20px;
+}
+
+.input-item ion-input {
+  font-size: 15px;
+}
+
+.auth-btn {
+  margin-top: 24px;
+  --border-radius: 10px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.register-section {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
