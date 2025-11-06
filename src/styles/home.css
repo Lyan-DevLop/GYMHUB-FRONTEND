@@ -1,0 +1,130 @@
+/* home.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  min-height: 100vh;
+}
+
+.home-content {
+  padding: 3rem 1rem;
+  text-align: center;
+  animation: fadeIn 1s ease;
+}
+
+.home-header h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.home-header h1 span {
+  color: #1abc9c;
+  text-shadow: 0 0 10px rgba(26, 188, 156, 0.6);
+}
+
+.home-header p {
+  font-size: 1.2rem;
+  color: #dcdcdc;
+  max-width: 600px;
+  margin: 0.5rem auto 2rem;
+  line-height: 1.6;
+}
+
+.servicios-section {
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  margin: 3rem auto;
+  max-width: 1200px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.servicios-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 2.5rem;
+  color: #1abc9c;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.servicio-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 330px;
+  text-align: left;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.servicio-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.servicio-card h3 {
+  font-size: 1.5rem;
+  color: #1abc9c;
+  margin-bottom: 1rem;
+}
+
+.servicio-card p {
+  font-size: 0.95rem;
+  color: #ddd;
+  margin: 0.4rem 0;
+}
+
+.btn-reservar {
+  background: linear-gradient(90deg, #1abc9c, #16a085);
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.6rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.btn-reservar:hover {
+  background: linear-gradient(90deg, #20e3b2, #1abc9c);
+  box-shadow: 0 0 10px #1abc9c;
+  transform: translateY(-3px);
+}
+
+.cargando,
+.sin-servicios {
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

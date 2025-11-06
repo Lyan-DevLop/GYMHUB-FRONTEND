@@ -1,0 +1,87 @@
+/* footer.css */
+
+.footer {
+  background: linear-gradient(135deg, #0a3d62, #1a6cb3);
+  color: white;
+  padding: 3rem 1rem;
+  text-align: center;
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  position: relative;
+  margin-top: 2rem;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #1abc9c, #16a085);
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  text-align: left;
+}
+
+.footer-section {
+  margin-bottom: 1.5rem;
+}
+
+.footer-section h3 {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.footer-section h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: #1abc9c;
+}
+
+.footer-section p, 
+.footer-section a {
+  color: #ecf0f1;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.footer-section a {
+  display: block;
+  margin-bottom: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: #1abc9c;
+  padding-left: 5px;
+}
+
+.footer-bottom {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.9rem;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    padding: 4rem 2rem;
+  }
+  
+  .footer-section h3 {
+    font-size: 1.3rem;
+  }
+}
