@@ -14,9 +14,8 @@ import Register from "./pages/register.jsx";
 import "./App.css";
 import "./index.css";
 
-// 🔒 Componente interno para proteger rutas
 const ProtectedRoute = ({ children }) => {
-  const isAuthenticated = localStorage.getItem("token"); // o el método que uses
+  const isAuthenticated = localStorage.getItem("user");
   return isAuthenticated ? children : <Navigate to="/login" replace />;
 };
 
