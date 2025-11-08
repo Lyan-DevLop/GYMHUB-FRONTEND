@@ -1,13 +1,10 @@
 // src/App.jsx
 import { StrictMode } from "react";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Navigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 import Home from "./pages/home.jsx";
-import Layout from "./components/layout.jsx";
-import Footer from "./components/footer.jsx";
-import Navbar from "./components/navbar.jsx";
 import Servicios from "./pages/servicios.jsx";
 import Perfil from "./pages/perfil.jsx";
 import Reservas from "./pages/reservas.jsx";
@@ -16,6 +13,11 @@ import Register from "./pages/register.jsx";
 
 import "./App.css";
 import "./index.css";
+
+const ProtectedRoute = ({ children }) => {
+  const isAuthenticated = localStorage.getItem("user");
+  return isAuthenticated ? children : <Navigate to="/login" replace />;
+};
 
 const NotFound = () => (
   <div className="not-found" style={{ textAlign: "center", marginTop: "4rem" }}>
@@ -39,19 +41,35 @@ const router = createBrowserRouter([
   },
   {
     path: "/home",
-    element: <Home />,
+    element: (
+      <ProtectedRoute>
+        <Home />
+      </ProtectedRoute>
+    ),
   },
   {
     path: "/servicios",
-    element: <Servicios />,
+    element: (
+      <ProtectedRoute>
+        <Servicios />
+      </ProtectedRoute>
+    ),
   },
   {
     path: "/perfil",
-    element: <Perfil />,
+    element: (
+      <ProtectedRoute>
+        <Perfil />
+      </ProtectedRoute>
+    ),
   },
   {
     path: "/reservas",
-    element: <Reservas />,
+    element: (
+      <ProtectedRoute>
+        <Reservas />
+      </ProtectedRoute>
+    ),
   },
   {
     path: "*",
@@ -68,5 +86,6 @@ function App() {
 }
 
 export default App;
+
 
 
